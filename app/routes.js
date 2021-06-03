@@ -22,8 +22,8 @@ module.exports = (app) => {
     salescontroller.create
   );
 
-  // app.get(
-  //   "/sales/:id/:datetype",
-  //   controller.sales.get
-  // );
+  app.get(
+    "/sales-data",
+    salescontroller.getDataByParas
+  );
 };

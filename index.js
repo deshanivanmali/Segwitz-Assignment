@@ -1,4 +1,4 @@
-const {Client,Pool} = require('pg');
+const {Client} = require('pg');
 const express = require("express"),
   bodyParser = require("body-parser"),
   cors = require("cors"),
@@ -26,19 +26,6 @@ client.query('SELECT NOW()', (err, res) => {
   console.log(err, res)
   client.end()
 })
-  // const connectionString = 'postgres://admin:admin@localhost:5432/Segwitz-Assignment';
-  // const client = new Client({
-  //     connectionString:connectionString// process.env.DATA_BASE_LINK 
-  // });
-  // client.connect();
-  // console.log("Connected");
-  //  client.query('SELECT NOW()', (err, res) => {  
-   
-  //     console.log(err, res)
-  //     client.end()
-  //   })
-/// End connnection code
-
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json

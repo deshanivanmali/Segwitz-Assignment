@@ -41,3 +41,21 @@ try {
   // console.log("req.body",req.body);
  
 };
+exports.getDataByParas=(req,res)=>{
+  const { Pool, Client } = require("pg");
+
+const pool = new Pool({
+  user: 'admin',
+  host: 'localhost',
+  database: 'Segwitz-Assignment',
+  password: 'admin',
+  port: 5432,
+});
+
+pool.query("SELECT * from sales", (err, response) => {
+  console.log(response.rows);
+  let data=response.rows 
+  pool.end();
+  return res.json(data);
+});
+}
