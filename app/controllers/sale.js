@@ -1,5 +1,5 @@
 const db = require("../models");
-const Tutorial = db.sales;
+const Sales = db.sales;
 const Op = db.Sequelize.Op;
 exports.create = (req, res) => {
   // Validate request
@@ -11,7 +11,7 @@ exports.create = (req, res) => {
 //   }
 
   // // Create a Tutorial
-  const tutorial = {
+  const bodyData = {
     username: req.body.userName,
     amount: req.body.amount,
      createdat: req.body.createdat 
@@ -20,7 +20,7 @@ exports.create = (req, res) => {
 
   // Save Tutorial in the database
   console.log("req.body555",req.body);
-  Tutorial.create(tutorial)
+  Sales.create(bodyData)
     .then((data) => {
         console.log("data",data);
       res.send(data);
@@ -29,7 +29,7 @@ exports.create = (req, res) => {
         console.log("err",err);
       res.status(500).send({
         message:
-          err.message || "Some error occurred while creating the Tutorial.",
+          err.message || "Some error occurred while creating the Sales.",
       });
     });
 };
