@@ -1,6 +1,7 @@
 const db = require("../models");
 const Sales = db.sales;
 const Op = db.Sequelize.Op;
+
 exports.create = (req, res) => {
   // Validate request
 //   if (!req.body.amount) {
@@ -10,26 +11,33 @@ exports.create = (req, res) => {
 //     return;
 //   }
 
-  // // Create a Tutorial
+  // // Create a 
   const bodyData = {
-    username: req.body.userName,
-    amount: req.body.amount,
-     createdat: req.body.createdat 
-    
+    userName: req.body.userName,
+    amount: req.body.amount
+     //createdat: new Date()//req.body.createdat     
   };
-
-  // Save Tutorial in the database
-  console.log("req.body555",req.body);
+console.log("BODY DATA ",req.body)
+try {
+  
   Sales.create(bodyData)
-    .then((data) => {
-        console.log("data",data);
-      res.send(data);
-    })
-    .catch((err) => {
-        console.log("err",err);
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Sales.",
-      });
+  .then((data) => {
+
+      console.log("data",data);
+
+      return res.json(data);
+  })
+  .catch((err) => {
+      console.log("err",err);
+   return res.status(500).send({
+      message:
+        err.message || "Some error occurred while creating the Sales.",
     });
+  });
+} catch (error) {
+  console.log("ERROR ",error)
+}
+  // Save  in the database
+  // console.log("req.body",req.body);
+ 
 };
