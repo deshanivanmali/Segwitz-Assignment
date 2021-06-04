@@ -53,16 +53,16 @@ const pool = new Pool({
 });
 console.log("PARAMS ",req.params.value);
 let query;
-if(req.params.value=='Days'){
+if(req.params.value=='daily'){
 query=""
 }
-if(req.params.value=='Weeks'){
+if(req.params.value=='weekly'){
   query=""
   }
-  if(req.params.value=='Month'){
-    query=""
+  if(req.params.value=='monthly'){
+    query="SELECT * from sales"
     }
-pool.query("SELECT * from sales", (err, response) => {
+pool.query(query, (err, response) => {
   
   let data=response.rows 
   pool.end();
