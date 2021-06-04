@@ -51,7 +51,17 @@ const pool = new Pool({
   password: 'admin',
   port: 5432,
 });
-console.log("PARAMS ",req.params.value)
+console.log("PARAMS ",req.params.value);
+let query;
+if(req.params.value=='Days'){
+query=""
+}
+if(req.params.value=='Weeks'){
+  query=""
+  }
+  if(req.params.value=='Month'){
+    query=""
+    }
 pool.query("SELECT * from sales", (err, response) => {
   
   let data=response.rows 
