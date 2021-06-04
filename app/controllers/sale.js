@@ -55,7 +55,7 @@ const pool = new Pool({
 console.log("PARAMS ",req.params.value);
 let query;
 if(req.params.value=='daily'){
-query=""
+query="select sum(amount) as stats_amount from sales where cratedat>current_date"
 }
 if(req.params.value=='weekly'){
   query=""

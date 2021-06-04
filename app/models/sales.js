@@ -3,14 +3,8 @@ module.exports = (sequelize, Sequelize) => {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
-        primaryKey: true
-    
-        
-      },
-      
-      cratedat: {
-        type: Sequelize.DATE
-      },
+        primaryKey: true       
+      },    
       userName: {
         type: Sequelize.STRING
       },
@@ -24,7 +18,14 @@ module.exports = (sequelize, Sequelize) => {
         type:Sequelize.DATE
       }
 
-    });
+    },
+    {
+      timestamps: true,
+      underscored: false,
+      paranoid:true,
+      tableName: 'sales'
+    }
+    )
   
     return sales;
   };
