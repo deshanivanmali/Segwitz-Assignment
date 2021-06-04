@@ -6,6 +6,7 @@ CREATE TABLE "public"."sales" (
 	"amount" Numeric( 5, 2 ) NOT NULL,
 	"createdAt" Date NOT NULL,
 	"updatedAt" Date NOT NULL,
+	"cratedat" Date NOT NULL,
 	PRIMARY KEY ( "id" ) );
  ;
 

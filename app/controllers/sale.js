@@ -14,7 +14,8 @@ exports.create = (req, res) => {
   // // Create a 
   const bodyData = {
     userName: req.body.userName,
-    amount: req.body.amount
+    amount: req.body.amount,
+    cratedat:new Date()
      //createdat: new Date()//req.body.createdat     
   };
 console.log("BODY DATA ",req.body)

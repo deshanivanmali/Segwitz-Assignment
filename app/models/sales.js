@@ -7,6 +7,10 @@ module.exports = (sequelize, Sequelize) => {
     
         
       },
+      
+      cratedat: {
+        type: Sequelize.DATE
+      },
       userName: {
         type: Sequelize.STRING
       },
