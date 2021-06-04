@@ -23,7 +23,7 @@ module.exports = (app) => {
   );
 
   app.get(
-    "/sales-data",
-    salescontroller.getDataByParas
+    "/sales-data/:value",
+    salescontroller.getDataByParams
   );
 };

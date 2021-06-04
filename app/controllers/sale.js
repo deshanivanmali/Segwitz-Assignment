@@ -41,7 +41,7 @@ try {
   // console.log("req.body",req.body);
  
 };
-exports.getDataByParas=(req,res)=>{
+exports.getDataByParams=(req,res)=>{
   const { Pool, Client } = require("pg");
 
 const pool = new Pool({
@@ -51,9 +51,9 @@ const pool = new Pool({
   password: 'admin',
   port: 5432,
 });
-
+console.log("PARAMS ",req.params.value)
 pool.query("SELECT * from sales", (err, response) => {
-  console.log(response.rows);
+  
   let data=response.rows 
   pool.end();
   return res.json(data);
