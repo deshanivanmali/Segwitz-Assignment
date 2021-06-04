@@ -1,3 +1,5 @@
+CREATE DATABASE 'Segwitz-Assignment'
+
 CREATE TABLE "public"."sales" ( 
 	"id" Serial NOT NULL,
 	"userName" Character Varying( 50 ) NOT NULL,
@@ -7,4 +9,4 @@ CREATE TABLE "public"."sales" (
 	PRIMARY KEY ( "id" ) );
  ;
 
- CREATE DATABASE 'Segwitz-Assignment'
+ 
