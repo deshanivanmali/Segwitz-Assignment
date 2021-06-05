@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "d4331909-0751-4aaa-b77d-cd453f132577",
+		"name": "segwitzTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sales/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"vanmali deshani\",\r\n    \"amount\":7750.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sales/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sales",
+						"add"
+					]
+				},
+				"description": "sales/add"
+			},
+			"response": []
+		},
+		{
+			"name": "get by monthly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sales-data/monthly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sales-data",
+						"monthly"
+					]
+				},
+				"description": "get by params"
+			},
+			"response": []
+		},
+		{
+			"name": "get by daily",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sales-data/daily",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sales-data",
+						"daily"
+					]
+				},
+				"description": "daily"
+			},
+			"response": []
+		},
+		{
+			"name": "get by weekly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sales-data/weekly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sales-data",
+						"weekly"
+					]
+				},
+				"description": "weekly"
+			},
+			"response": []
+		}
+	]
+}
